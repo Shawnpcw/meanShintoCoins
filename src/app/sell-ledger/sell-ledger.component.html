@@ -1,0 +1,21 @@
+<h1>Browse the Sell Ledger</h1>
+
+<h5>Here you can browse all Selling ShintoCoin transactions</h5>
+<table class="table table-border">
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>Amount</th>
+      <th>Value</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of transactions">
+      <th>{{transaction.action}}</th>
+      <th>{{transaction.amount}}</th>
+      <th>{{transaction.value}}</th>
+      <th><button [routerLink]="['/transactions',transaction.id]">Details</button></th>
+    </tr>
+  </tbody>
+</table>
